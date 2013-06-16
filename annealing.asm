@@ -107,7 +107,7 @@ random_shuffle:
     push    r14
     mov     rbp,    rsp
     
-    test    rsi,    rsi
+    test    rdi,    rdi
     jz      .end
     
     test    esi,    esi
