@@ -6,7 +6,7 @@
 /* gr17.tsp, the smallest Travelling Salesman Problem instance from a set of
  * example instances found somewhere on the net. As far as I remember, the
  * optimal solution's cost is 2085. */
-uint32_t cost_table[][17] = {
+static const uint32_t cost_table[][17] = {
     { 0 },
     { 633, 0 },
     { 257, 390, 0 },
@@ -26,7 +26,7 @@ uint32_t cost_table[][17] = {
     { 121, 518, 142, 84, 297, 35, 29, 36, 236, 390, 238, 301, 55, 96, 153, 336, 0 } 
 };
 
-int crit_function(const uint32_t *cities,int cities_num)
+static int crit_function(const uint32_t *cities,int cities_num)
 {
     /* calculate the cost of visiting the given sequence of cities by querying
      * the cost table. */

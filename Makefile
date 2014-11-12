@@ -12,6 +12,6 @@ annealing.o : annealing.asm
 	nasm $(NASMFLAGS) -o $@ annealing.asm
 
 clean :
-	rm -f $(OBJS) $(OUTPUT)
+	$(RM) $(OBJS) $(OUTPUT)
 
 .PHONY : clean
